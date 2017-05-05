@@ -1,0 +1,31 @@
+﻿@model List<hw1.Models.money>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th>類別</th>
+                <th>日期</th>
+                <th>金額</th>
+            </tr>
+            
+            @{ int i = 1;
+                foreach (var item in Model)
+                {
+
+                    i += 1;
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.Class</td>
+                        <td>@item.Date</td>
+                        <td>@item.Money</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+<hr />
+<footer>
+    <p>&copy; 2017 - <a href="#">SkillTree</a></p>
+</footer>
